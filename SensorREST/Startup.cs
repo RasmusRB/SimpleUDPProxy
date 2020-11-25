@@ -26,6 +26,10 @@ namespace SensorREST
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAnyOrigin", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Sensor API", Version = "v1.0" });
@@ -44,6 +48,7 @@ namespace SensorREST
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sensor API v1.0"));
 
             app.UseRouting();
+            app.UseCors("AllowAnyOrigin");
 
             app.UseAuthorization();
 

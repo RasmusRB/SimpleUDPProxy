@@ -13,7 +13,7 @@ namespace SimpleUDPProxy
     class ProxyWorker
     {
 
-        private const string URI = "http://localhost:64616/api/sensor/";
+        private const string URI = "http://rb-sensordata-rest.azurewebsites.net/api/sensor";
 
         private readonly UdpClient client = new UdpClient(10100); // modtager pakker på port 10100
         private byte[] buffer;
