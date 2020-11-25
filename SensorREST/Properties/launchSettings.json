@@ -4,7 +4,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:64616",
+      "applicationUrl": "http://rb-sensordata-rest.azurewebsites.net/",
       "sslPort": 0
     }
   },
@@ -20,8 +20,8 @@
     "SensorREST": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
-      "applicationUrl": "http://localhost:5000",
+      "launchUrl": "api/sensor",
+      "applicationUrl": "http://rb-sensordata-rest.azurewebsites.net/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
